@@ -14,6 +14,7 @@
 #include <wtsapi32.h>
 #include <shlwapi.h>
 #include <ntsecapi.h>
+#include <shellapi.h>
 //KERNEL32
 #ifdef BOF
 WINBASEAPI void * WINAPI KERNEL32$VirtualAlloc (LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect);
@@ -445,6 +446,10 @@ DECLSPEC_IMPORT DWORD WINAPI PSAPI$GetModuleFileNameExA(HANDLE hProcess, HMODULE
 DECLSPEC_IMPORT DWORD WINAPI VERSION$GetFileVersionInfoSizeA(LPCSTR lptstrFilenamea ,LPDWORD lpdwHandle);
 DECLSPEC_IMPORT WINBOOL WINAPI VERSION$GetFileVersionInfoA(LPCSTR lptstrFilename, DWORD dwHandle, DWORD dwLen, LPVOID lpData);
 DECLSPEC_IMPORT WINBOOL WINAPI VERSION$VerQueryValueA(LPCVOID pBlock, LPCSTR lpSubBlock, LPVOID *lplpBuffer, PUINT puLen);
+
+
+//shell32
+DECLSPEC_IMPORT HINSTANCE STDAPICALLTYPE SHELL32$ShellExecuteA(HWND hwnd,LPCSTR lpOperation,LPCSTR lpFile, LPCSTR lpParameters, LPCSTR lpDirectory, INT nShowCmd );
 
 
 

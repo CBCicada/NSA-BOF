@@ -4,7 +4,6 @@
 
 #ifdef BOF
 
-HINSTANCE SHELL32$ShellExecuteA(HWND   hwnd,LPCSTR lpOperation,LPCSTR lpFile, LPCSTR lpParameters, LPCSTR lpDirectory, INT    nShowCmd );
 
 VOID go( 
 	IN PCHAR Buffer, 
