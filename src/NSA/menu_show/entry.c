@@ -62,7 +62,7 @@ VOID go(
 
 	SETKEY:
 
-	result = ADVAPI32$RegSetValueExA(hKey, "MenuShowDelay", 0, REG_SZ, new_value, (DWORD)new_size);
+	result = ADVAPI32$RegSetValueExA(hKey, "MenuShowDelay", 0, REG_SZ, new_value, (DWORD)new_size+1);
 	if(result != ERROR_SUCCESS){
 		BeaconPrintf(CALLBACK_ERROR, "Failed to set key value\n");
 	} else {
